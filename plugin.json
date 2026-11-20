@@ -1,0 +1,55 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "fopilot",
+  "version": "1.0.0",
+  "description": "Nova Poshta waybills, Prom, Rozetka and Horoshop orders, Checkbox receipts and monobank statements for Ukrainian online sellers.",
+  "author": {
+    "name": "Bovsanka",
+    "email": "support@fopilot.com.ua",
+    "url": "https://bovsanka.com"
+  },
+  "homepage": "https://fopilot.com.ua/en",
+  "repository": "https://github.com/WinTende/fopilot-mcp",
+  "license": "MIT",
+  "keywords": [
+    "ecommerce",
+    "ukraine",
+    "nova-poshta",
+    "prom-ua",
+    "checkbox",
+    "monobank",
+    "orders",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "FOPilot",
+        "shortDescription": "Tools for Ukrainian sellers",
+        "longDescription": "FOPilot connects the services a Ukrainian online seller uses every day, so your assistant can do the routine work: Nova Poshta, Prom.ua, Rozetka, Horoshop, KeyCRM, Checkbox and monobank.\n\nShip orders. Find cities and branches, estimate delivery cost and time, create Nova Poshta waybills one by one or in bulk (a dry run comes first), track parcels and attach waybill numbers to orders.\n\nHandle orders. List new orders from the connected stores, open an order, update its status and stock.\n\nKeep the books straight. Reconcile card payments with orders, see monobank balances and statements, and check the Checkbox shift and receipts. Opening or closing a shift and issuing receipts or return receipts always ask for confirmation first.\n\nStart the day informed. A morning summary in one answer: new orders, payments, parcels on the way and anything that needs attention.\n\nWho it is for: sole proprietors (FOP) and small teams that sell online in Ukraine.\n\nLimits: FOPilot works through each service's official API with your own keys, which are stored encrypted. It reads monobank data and never moves money between accounts. Fiscal receipts, closing a shift and deleting a waybill cannot be undone, so they are confirmed first. Sign-in with a FOPilot account is required.",
+        "developerName": "Bovsanka",
+        "category": "Productivity",
+        "capabilities": [
+          "Create and track Nova Poshta waybills",
+          "Process orders from Prom, Rozetka, Horoshop and KeyCRM",
+          "Issue Checkbox fiscal receipts with confirmation",
+          "Read monobank balances and statements and reconcile payments"
+        ],
+        "websiteURL": "https://fopilot.com.ua/en",
+        "supportURL": "https://fopilot.com.ua/en/contact",
+        "privacyPolicyURL": "https://fopilot.com.ua/en/legal/privacy",
+        "termsOfServiceURL": "https://fopilot.com.ua/en/legal/terms",
+        "defaultPrompt": [
+          "Give me today's summary for my store: new orders, payments and parcels.",
+          "Which orders were paid but not shipped yet?",
+          "How much is Nova Poshta delivery of a 2 kg parcel from Kyiv to Lviv?"
+        ],
+        "brandColor": "#C2410C",
+        "brandColorDark": "#FB923C",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md"
+    }
+  }
+}
