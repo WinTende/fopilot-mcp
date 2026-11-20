@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ua.com.fopilot/fopilot",
+  "title": "FOPilot",
+  "description": "Nova Poshta, Prom/Horoshop orders, Checkbox receipts and monobank for Ukrainian online sellers.",
+  "version": "1.0.0",
+  "websiteUrl": "https://fopilot.com.ua",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://fopilot.com.ua/mcp"
+    }
+  ]
+}
